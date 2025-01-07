@@ -4,7 +4,9 @@ import {
   Home,
   Layout,
   Login,
+  NewPurchases,
   ProtectedRoute,
+  Purchases,
   Setting,
   Signup,
   Users,
@@ -65,6 +67,8 @@ function AppRoutes() {
       <Route path={ROUTES.SIGNUP} element={<Signup />} />
       <Route path="/" element={<ProtectedRoute element={<Layout />} />}>
         <Route index element={<Home />} />
+        <Route path={ROUTES.PURCHASES} element={<Purchases />} />
+        <Route path={ROUTES.NEWPURCHASE} element={<NewPurchases />} />
         <Route path={ROUTES.USERS} element={<Users />} />
         <Route path={ROUTES.SETTING} element={<Setting />} />
       </Route>

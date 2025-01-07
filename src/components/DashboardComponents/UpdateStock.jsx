@@ -33,9 +33,7 @@ const UpdateStock = () => {
 
             <form onSubmit={method.handleSubmit(onsubmit)}>
             <div className="input_box">
-            <label htmlFor="productId" className="custom-label">
-              Product <span className="text-red-700 fw-bold ">*</span>
-            </label>
+            
             <CDropdown
               control={method.control}
               name={"productId"}

@@ -14,6 +14,7 @@ const CDropdown = ({
   optionValue = "value",
   required = false,
   showOnFocus = true,
+  label="",
   showClear = false,
   filter = true,
   disabled = false,
@@ -31,6 +32,10 @@ const CDropdown = ({
         rules={{ required }}
         render={({ field, fieldState }) => (
           <>
+           <label htmlFor={field.name} className={`custom-label `}>
+              {label}
+              {required && <span className="text-red-700 fw-bold ">*</span>}
+            </label>
             <Dropdown
               id={field.name}
               value={field.value}

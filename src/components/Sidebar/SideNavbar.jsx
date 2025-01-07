@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import "../../styles/CustomSidebar.css"; // Optional CSS for custom styles
 import { ROUTES } from "../../utils/routes";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faChartLine, faGear } from "@fortawesome/free-solid-svg-icons";
 
 const CustomSidebar = ({ visible, onHide }) => {
   const navigate = useNavigate();
@@ -30,7 +32,16 @@ const CustomSidebar = ({ visible, onHide }) => {
               className="sidebar-link"
               onClick={handleLinkClick}
             >
-              <i className="pi pi-home"></i> Dashboard
+             <FontAwesomeIcon icon={faChartLine} />  Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={ROUTES.PURCHASES}
+              className="sidebar-link"
+              onClick={handleLinkClick}
+            ><FontAwesomeIcon icon={faCartShopping} />
+             Purchases
             </Link>
           </li>
           <li>
@@ -49,7 +60,7 @@ const CustomSidebar = ({ visible, onHide }) => {
               className="sidebar-link "
               onClick={handleLinkClick}
             >
-              <i className="pi pi-cog"></i>
+              <FontAwesomeIcon icon={faGear} />
               Settings
             </Link>
           </li>
